@@ -66,4 +66,4 @@ jobs:
         python ebooksapi/manage.py migrate
     - name: Run Application
       run: |
-        python manage.py runserver 0.0.0.0:80 &
+        python ebooksapi/manage.py runserver 0.0.0.0:80 &
