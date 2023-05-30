@@ -53,5 +53,5 @@ jobs:
           git reset --hard origin/main &&
           git pull origin main &&
           source venv/bin/activate &&
-          python ebooksapi/manage.py runserver 0.0.0.0:8050
+          python ebooksapi/manage.py runserver 0.0.0.0:8050 &
         '
