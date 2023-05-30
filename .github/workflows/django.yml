@@ -51,19 +51,7 @@ jobs:
           git checkout main &&
           git fetch --all &&
           git reset --hard origin/main &&
-          git pull origin main
+          git pull origin main &&
+          source venv/bin/activate &&
+          python ebooksapi/manage.py runserver 0.0.0.0:8050
         '
-    - name: Set up Python 3
-      uses: actions/setup-python@v3
-      with:
-        python-version: '3.9'
-    - name: Install Dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
-    - name: Run migrations
-      run: |
-        python ebooksapi/manage.py migrate
-    - name: Run Application
-      run: |
-        python ebooksapi/manage.py runserver 0.0.0.0:8050 &
