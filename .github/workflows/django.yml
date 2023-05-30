@@ -44,7 +44,7 @@ jobs:
 
       run: |
         echo "$PRIVATE_KEY" > private_key && chmod 600 private_key
-        ssh -t -t -i private_key ${USER_NAME}@${HOSTNAME}
+        ssh -t -t -o StrictHostKeyChecking=no -i private_key ${USER_NAME}@${HOSTNAME}
 
         #We connected to AWS instance and we start deployment
         cd /home/ec2-user/test_project &&
