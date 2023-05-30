@@ -47,7 +47,7 @@ jobs:
         ssh -o StrictHostKeyChecking=no -i private_key ${USER_NAME}@${HOSTNAME} '
 
           #We connected to AWS instance and we start deployment to the server
-          cd /home/ec2-user/test_project &&
+          cd /home/ec2-user/test_project/session3 &&
           git checkout master &&
           git fetch --all &&
           git reset --hard origin/master &&
