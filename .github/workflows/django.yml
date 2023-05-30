@@ -48,9 +48,9 @@ jobs:
 
           #We connected to AWS instance and we start deployment to the server
           cd /home/ec2-user/test_project/session3 &&
-          git checkout master &&
+          git checkout main &&
           git fetch --all &&
-          git reset --hard origin/master &&
+          git reset --hard origin/main &&
           git pull origin master
         '
       
