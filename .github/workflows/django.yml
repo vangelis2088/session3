@@ -52,6 +52,6 @@ jobs:
           git fetch --all &&
           git reset --hard origin/main &&
           git pull origin main &&
-          source venv/bin/activate &&
-          nohup python ebooksapi/manage.py runserver 0.0.0.0:8050 &
+          docker build --tag django_test:latest . &&
+          docker run --name django_test -d -p 8050:8000 django_test:latest
         '
